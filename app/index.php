@@ -33,16 +33,20 @@ include('header.php');
     <!-- /.content-header -->
 
     <!-- Main content -->
-   <?php 
-   if (isset($_GET['page'])){
-    if($_GET['page'] == 'dashboard'){
-      include('data_mhs.php');
-      }
-    else if($_GET['page'] == 'data-mhs'){
-      include('data_mhs.php');
-      }
-   }
-   ?>
+    <?php 
+if (isset($_GET['page'])){
+  if ($_GET['page'] == 'dashboard') {
+    include('content.php');
+  } else if ($_GET['page'] == 'data-mhs') {
+    include('data_mhs.php');
+  } else {
+    include('content.php');
+  }
+} else {
+  include('content.php');
+}
+?>
+
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
