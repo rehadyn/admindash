@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include('header.php'); ?>
+<?php 
+session_start();
+include('header.php'); 
+?>
+<?php include('../conf/config.php'); ?>
 
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -29,7 +33,7 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-   <?php include('content.php'); ?>
+   <?php include('data_mhs.php'); ?>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
