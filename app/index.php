@@ -33,7 +33,16 @@ include('header.php');
     <!-- /.content-header -->
 
     <!-- Main content -->
-   <?php include('data_mhs.php'); ?>
+   <?php 
+   if (isset($_GET['page'])){
+    if($_GET['page'] == 'dashboard'){
+      include('data_mhs.php');
+      }
+    else if($_GET['page'] == 'data-mhs'){
+      include('data_mhs.php');
+      }
+   }
+   ?>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
