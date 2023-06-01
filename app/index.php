@@ -2,6 +2,9 @@
 <html lang="en">
 <?php 
 session_start();
+if (!$_SESSION['username']){
+  header("location:../index.php?session=exp");
+}
 include('header.php'); 
 ?>
 <?php include('../conf/config.php'); ?>
